@@ -65,7 +65,7 @@ return res.status(400).json({ error: "Email-i kërkohet!" });
 }
 try {
 const { error } = await supabase.auth.resetPasswordForEmail(email, {
-redirectTo: 'http://localhost:5173/update-password',
+redirectTo: `${process.env.FRONTEND_URL || 'http://localhost:5173'}/update-password`,
 });
 if (error) throw error;
 res.status(200).json({ message: "Email-i për resetim u dërgua me sukses." });

@@ -5,7 +5,7 @@ import { supabase } from "../supabaseClient";
 import axios from "axios";
 
 const ACCEPTED_TYPES = ".txt,.pdf,.docx";
-const API_BASE_URL = "http://localhost:5000/api/ai";
+const API_BASE_URL = `${import.meta.env.VITE_API_URL ?? 'http://localhost:5000'}/api/ai`;
 
 export default function UploadNotes() {
   const [text, setText] = useState("");

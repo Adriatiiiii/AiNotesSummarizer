@@ -5,7 +5,7 @@ import axios from "axios";
 import { Send, Bot, User, ArrowLeft, Loader2, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const API_BASE_URL = "http://localhost:5000/api/ai";
+const API_BASE_URL = `${import.meta.env.VITE_API_URL ?? 'http://localhost:5000'}/api/ai`;
 
 export default function ChatPage() {
   const { noteId } = useParams();

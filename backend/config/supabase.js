@@ -1,11 +1,4 @@
-const { createClient } = require('@supabase/supabase-js');
-
-const supabaseUrl = "https://dictjhfgyefcfpcwrxfh.supabase.co";
-const supabaseKey = "YOUR_ANON_KEY_HERE";
-
-const supabase = createClient(supabaseUrl, supabaseKey);
-
-module.exports = supabase;require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });
+require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });
 
 const { createClient } = require('@supabase/supabase-js');
 
